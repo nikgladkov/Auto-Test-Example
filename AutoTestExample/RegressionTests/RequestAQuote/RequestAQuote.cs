@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -37,6 +32,7 @@ namespace AutotestExample.RegressionTests.RequestAQuote
             Assert.AreEqual("Hardware Supply Online | Buy Branded Door Hardware and Parts", driver.Title);
 
             //Click on Request Qoute link in the header
+            //Expected result: Request A Quote page is opened
             driver.FindElement(By.CssSelector(Selectors.HEADER_SUBMIT_QOUTE_LINK_CSS_SELECTOR)).Click();
             Assert.AreEqual("Request A Quote",driver.Title);
         }
